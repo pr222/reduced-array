@@ -19,5 +19,11 @@
  * @returns {number} The total sum of the numbers in the array.
  */
 export function getSum (data) {
-  // TODO: Write your code here.
+  if (!Array.isArray(data)) {
+    throw new TypeError('The passed argument is not an array.')
+  }
+
+  const sum = data.reduce((a, b) => a + b, 0)
+
+  return sum
 }
